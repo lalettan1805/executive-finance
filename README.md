@@ -27,7 +27,7 @@ Executive Finance is a personal finance dashboard built using HTML, CSS, and Jav
 
 [Executive Finance](https://lalettan1805.github.io/executive-finance/)
 
-## Screenshots
+## Sample Screenshots
 
 ### Dashboard Page
 ![Dashboard](Dashboard.png)
