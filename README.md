@@ -1,4 +1,31 @@
-# executive-finance
-Executive Finance : A personal financial dashboard
+# Executive Finance
 
-A purely front-end financial dashboard built with HTML, CSS, and vanilla JavaScript. It lets users track income and expense transactions, set monthly budgets, convert currencies (including major cryptocurrencies) via a live API, and visualize spending with Chart.js statistics and graphs. Transaction data can be imported and exported as CSV. Data is persisted using the browser's localStorage.
+Executive Finance is a personal finance dashboard built using HTML, CSS, and JavaScript. It helps users track income, expenses, budgets, savings, and financial insights through an interactive interface.
+
+## Features
+
+- Dashboard with financial overview
+- Income management
+- Expense management
+- Budget management
+- Interactive charts and statistics
+- Currency Converter
+- CSV based import and export
+- Local storage support
+- Desktop First Design (Not fully responsive)
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- Chart.js
+- Local Storage
+- APIs
+
+## Deployed Website
+
+[https://your-github-pages-link](https://lalettan1805.github.io/executive-finance/)
+
+## Screenshots
+
