@@ -1,0 +1,903 @@
+body{
+    margin:0px;
+    background-color:rgb(240, 240, 240);
+    font-family:'';
+}
+
+#navbar{
+    height:8vh;
+    background-color: #0C1627;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    position:fixed;
+}
+
+.navbar{
+    color:white;
+    align-items:center;
+    display:flex;
+    justify-content:space-evenly;
+    width:8%;
+}
+
+    #dashboard_page{
+        width:100%;
+        display:inline-flex;
+        flex-direction:column;
+        flex-wrap:wrap;
+        margin:0px;
+        padding-top:8vh;
+    }
+
+    #welcome{
+        padding-top:1%;
+        width:98%;
+        height:10%;
+        padding-bottom:2%;
+        padding-left:2%;
+    }
+
+    #personal_highlights{
+        width:100%;
+        height:170px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-evenly;
+        align-items:center;
+        padding-bottom:10px;
+    }
+
+    .personal_highlights{
+        height:160px;
+        width:21%;
+        border-radius:10px;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        padding-left:1%;
+    }
+
+    #current_balance_dashboard{
+        background-color:#4E4FED;
+        border:4px solid #4E4FED;
+        color:white;
+    }
+
+    #total_income_dashboard{
+        background-color:#EBF9F3;
+        border:4px solid #d1e2db;
+        color:#325a49;
+    }
+
+    #total_expenditure_dashboard{
+        background-color:#FDF3EA;
+        border:4px solid #e4dad1;
+        color:#76402f;
+    }
+
+    #total_savings_dashboard{
+        background-color:#EBF3FD;
+        border:4px solid #dae3ed;
+        color:#3b435a;
+    }
+
+    #dashboard_3rdrow{
+        width:100%;
+        height:350px;
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
+        padding-bottom:10px;
+    }
+
+    #budget_progress{
+        height:90%;
+        width:39%;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-around;
+        border-radius:10px;
+        background-color:white;
+        padding-left:1%;
+    }
+
+    #expense_trend{
+        height:90%;
+        width:50%;
+        border-radius:10px;
+        background-color:white;
+        padding-left: 2%;
+        padding-right:2%;
+    }
+
+    #dashboard_graph_container{
+        height:75%;
+    }
+
+    #budget_bar{
+        width:90%;
+        height:10%;
+        accent-color:#4a8a6e;
+    }
+
+    #budget_button{
+        width:30%;
+        height:20%;
+        border-radius:10px;
+        background-color:#E3E9FD;
+        border:2px solid #525d9e;
+        color:#525d9e;
+        font-size:100%;
+    }
+
+    #dashboard_4throw{
+        width:100%;
+        height:400px;
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
+        padding-bottom:10px;
+    }
+
+    #recent_transactions{
+        height:90%;
+        width:45%;
+        border-radius:10px;
+        display:flex;
+        flex-direction:column;
+        padding-left:1%;
+        justify-content:space-evenly;
+        background-color:white;
+    }
+
+    .recent_transactions{
+        height:15%;
+        width:93%;
+        /* border:1px solid black; */
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding-left:2%;
+        padding-right:2%;
+        border-radius:10px;
+        background-color:rgb(230, 229, 229);
+    }
+
+    #financial_data{
+        height:90%;
+        width:21.5%;
+        border-radius:10px;
+        display:flex;
+        flex-direction:column;
+        padding-left:1%;
+        padding-right:1%;
+        justify-content:space-evenly;
+        align-items:center;
+        background-color:white;
+    }
+
+    .financial_data{
+        height:33%;
+        width:89%;
+        border:5px solid black;
+        border-radius:10px;
+        padding-left:5%;
+        padding-right:1%;
+        padding-top:1%;
+        padding-bottom:1%;
+        justify-content:space-around;
+        display:flex;
+        flex-direction:column;
+
+    }
+
+    #live_data{
+        height:90%;
+        width:22.5%;
+        border-radius:10px;
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
+        background-color:white;
+    }
+
+    .live_data{
+        height:15%;
+        width:100%;
+        border:1px solid black;
+    }
+    
+    #currency_convertor{
+        height:97%;
+        width:97%;
+        background-color:#eeece7;
+        border-radius: 10px;
+        border:0px;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    #dashboard_amount{
+        width:100%;
+        margin-top:5%;
+        height:40%;
+    }
+
+    #from{
+        width:75%;
+        height:60%;
+        margin-top:5%;
+    }
+
+    #to{
+        width:75%;
+        height:60%;
+        margin-top:5%;
+    }
+
+    #dashboard_exchange{
+        width:80%;
+    }
+
+    #convertor_button{
+        height:10%;
+        width:80%;
+    }
+
+
+
+
+    #income_page{
+        width:100%;
+        display:inline-flex;
+        flex-direction:column;
+        flex-wrap:wrap;
+        margin:0px;
+        padding-top:8vh;
+        margin:0px;
+        display:none;
+    }
+
+    #add_income_bar{
+        height:50px;
+        width:98%;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        padding-left:1%;
+    }
+
+    #income_label{
+        height:50%;
+        width:15%;
+        border-radius:10px;
+        border:0px;
+        padding-left:1%;
+    }
+
+    #income_type{
+        width:12%;
+        height:50%;
+        border-radius:10px;
+        border:0px;
+        padding-left:0.5%;
+    }
+
+    #others_income{
+        height:50%;
+        width:12%;
+        border-radius:10px;
+        border:0px;
+        padding-left:1%;
+        display:none;
+    }
+
+    #income_unit{
+        width:10%;
+        height:50%;
+        border-radius:10px;
+        border:0px;
+        padding-left:0.5%;
+    }
+
+    #income_mode{
+        width:10%;
+        height:50%;
+        border-radius:10px;
+        border:0px;
+        padding-left:0.5%;
+    }
+
+    #income_amount{
+        width:10%;
+        height:50%;
+        border-radius:10px;
+        border:0px;
+        padding-left:1%;
+    }
+
+    #income_date{
+        width:10%;
+        height:50%;
+        border-radius:10px;
+        border:0px;
+        padding-left:1%;
+    }
+
+    #add_income{
+        width:10%;
+        height:70%;
+        border-radius:10px;
+        border:0px;
+        padding-left:1%;
+        background-color:#19199d;
+        color:white;
+        font-weight:bold;
+    }
+
+    #income_list{
+        width:98.5%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+        padding-left:0.5%;
+        padding-bottom:10px;
+    }
+
+    .income_list{
+        width:93%;
+        height:50px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        /* border:1px solid black; */
+        padding-left:2%;
+        padding-right:2%;
+        border-radius:10px;
+        background-color:rgb(205, 205, 205);
+    }
+
+    .delete_income{
+        border-radius:10px;
+        border:0px;
+        background-color:#071649;
+        color:white;
+        height:50%;
+        padding-left:1%;
+        padding-right:1%;
+        font-weight:bold;
+    }
+
+
+
+
+    #expenses_page{
+        width:100%;
+        display:inline-flex;
+        flex-direction:column;
+        flex-wrap:wrap;
+        margin:0px;
+        padding-top:8vh;
+        margin:0px;
+        display:none;
+    }
+
+    #add_expense_bar{
+        height:50px;
+        width:98%;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        padding-left:1%;
+    }
+
+    #expense_label{
+        height:50%;
+        width:15%;
+        border-radius:10px;
+        border:0px;
+        padding-left:1%;
+    }
+
+    #expense_type{
+        width:12%;
+        height:50%;
+        border-radius:10px;
+        border:0px;
+        padding-left:0.5%;
+    }
+
+    #others_expense{
+        height:50%;
+        width:12%;
+        border-radius:10px;
+        border:0px;
+        padding-left:1%;
+        display:none;
+    }
+
+    #expense_unit{
+        width:10%;
+        height:50%;
+        border-radius:10px;
+        border:0px;
+        padding-left:0.5%;
+    }
+
+    #expense_mode{
+        width:10%;
+        height:50%;
+        border-radius:10px;
+        border:0px;
+        padding-left:0.5%;
+    }
+
+    #expense_amount{
+        width:10%;
+        height:50%;
+        border-radius:10px;
+        border:0px;
+        padding-left:1%;
+    }
+
+    #expense_date{
+        width:10%;
+        height:50%;
+        border-radius:10px;
+        border:0px;
+        padding-left:1%;
+    }
+
+    #add_expense{
+        width:10%;
+        height:70%;
+        border-radius:10px;
+        border:0px;
+        padding-left:1%;
+        background-color:#19199d;
+        color:white;
+        font-weight:bold;
+    }
+
+    #expense_list{
+        width:98.5%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+        padding-left:0.5%;
+        padding-bottom:10px;
+    }
+
+    .expense_list{
+        width:93%;
+        height:50px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        /* border:1px solid black; */
+        padding-left:2%;
+        padding-right:2%;
+        border-radius:10px;
+        background-color:rgb(205, 205, 205);
+    }
+
+    .delete_expense{
+        border-radius:10px;
+        border:0px;
+        background-color:#071649;
+        color:white;
+        height:50%;
+        padding-left:1%;
+        padding-right:1%;
+        font-weight:bold;
+    }
+
+
+
+    #budgets_page{
+        width:100%;
+        display:inline-flex;
+        flex-direction:column;
+        flex-wrap:wrap;
+        margin:0px;
+        padding-top:8vh;
+        margin:0px;
+        display:none;
+    }
+
+    #budgets_1strow{
+        width:96%;
+        height:70px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding-left:2%;
+        gap:5%;
+    }
+
+    #setBudgetBar{
+        width:70%;
+        height:40%;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+
+    #budgetCategory{
+        height:100%;
+        border:0px;
+        border-radius:10px;
+        padding-left:1%;
+    }
+
+    #budgetCurrency{
+        width:20%;
+        height:100%;
+        border:0px;
+        border-radius:10px;
+        padding-left:1%;
+    }
+
+    #budgetAmount{
+        width:20%;
+        height:100%;
+        border:0px;
+        border-radius:10px;
+        padding-left:1%;
+    }
+
+    #setBudgetButton{
+        width:20%;
+        height:100%;
+        border:0px;
+        border-radius:10px;
+        color:white;
+        background-color:#19199d;
+        font-weight:bold;
+    }
+
+    #deleteBudgetBar{
+        width:30%;
+        height:40%;
+        display:flex;
+        align-items:center;
+        justify-content:space-evenly;
+    }
+
+    #deleteBudgetCategory{
+        height:100%;
+        border:0px;
+        border-radius:10px;
+        padding-left:1%;
+        width:50%;
+    }
+
+
+    #deleteBudgetButton{
+        width:40%;
+        height:100%;
+        border:0px;
+        border-radius:10px;
+        color:white;
+        background-color:#c81313;
+        font-weight:bold;
+    }
+
+    #budgets_list{
+        width:98.5%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+        padding-left:0.5%;
+        padding-bottom:10px;
+    }
+
+    .budgets_list{
+        width:93%;
+        height:70px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding-left:2%;
+        padding-right:2%;
+        border-radius:10px;
+        background-color:rgb(205, 205, 205);
+    }
+
+    .budget_progress{
+        accent-color:#4a8a6e;
+        width:50%;
+    }
+
+
+
+
+    #statistics_page{
+        width:100%;
+        display:inline-flex;
+        flex-direction:column;
+        flex-wrap:wrap;
+        margin:0px;
+        padding-top:8vh;
+        margin:0px;
+        display:none;
+    }
+
+    #statistics_row1{
+        width:96%;
+        height:600px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding-left:2%;
+        padding-right:2%;
+        gap:2%;
+        /* border:1px solid black; */
+    }
+
+    #pie_chart_container{
+        height:90%;
+        width:45%;
+        /* border:1px solid black; */
+        padding-top:1.5%;
+        border-radius:10px;
+        background-color: white;
+        text-align: center;
+    }
+
+    #pie_chart_options{
+        display:inline;
+        height:100%;
+        padding-left:1%;
+        border-radius:9999px;
+        padding-right:5%;
+        border:1px solid black;
+        background-color:white;
+    }
+    
+    #pie_chart_wrapper{
+        height:85%;
+        width:90%;
+        /* border:1px solid black; */
+        display:block;
+        padding:5%;
+    }
+
+    #line_chart_container{
+        height:90%;
+        width:53%;
+        /* border:1px solid black; */
+        border-radius:10px;
+        background-color: white;
+        padding-top:1.5%;
+        padding-left:2%;
+        padding-right:2%;
+
+    }
+
+    #line_option{
+        border-radius:99999px;
+        padding-left:1%;
+        height:100%;
+    }
+
+    #line_start_date{
+        padding-left:1%;
+    }
+
+    #line_end_date{
+        padding-left:1%;
+    }
+
+    #show_line_graph{
+        background-color:#19199D;
+        border-radius:5px;
+        border:1px solid black;
+        height:180%;
+        font-weight:bold;
+        color:white;
+        width:15%;
+    }
+
+    #line_chart_wrapper{
+        padding-top:2%;
+        height:80%;
+        width:100%;
+        /* border:1px solid black; */
+    }
+
+    #statistics_row2{
+        width:96%;
+        height:600px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding-left:2%;
+        padding-right:2%;
+        gap:2%;
+        /* border:1px solid black; */
+    }
+
+    #bar_chart_wrapper{
+        height:85%;
+        width:90%;
+        /* border:1px solid black; */
+        display:block;
+        padding-left:4%;
+    }
+
+    #top_insights_container{
+        height:90%;
+        width:53%;
+        /* border:1px solid black; */
+        border-radius:10px;
+        background-color: white;
+        padding-top:1.5%;
+        padding-left:2%;
+        padding-right:2%;
+
+    }
+
+    #top_insights{
+        height:85%;
+        width:100%;
+        /* border:1px solid black; */
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-evenly;
+        align-items:center;
+    }
+
+    .top_insights{
+        width:43%;
+        height:38%;
+        border-radius:10px;
+        padding-left:2%;
+        padding-bottom:2%;
+        padding-top:2%;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:flex-start;
+        /* border:1px solid black; */
+    }
+
+
+
+    #settings_page{
+        width:100%;
+        display:inline-flex;
+        flex-direction:column;
+        flex-wrap:wrap;
+        margin:0px;
+        padding-top:8vh;
+        margin:0px;
+        display:none;
+        align-items:center;
+    }
+
+    #settings_row1{
+        width:98%;
+        height:700px;
+        display:flex;
+        flex-direction:column;
+        flex-wrap:wrap;
+        align-items:center;
+        justify-content:space-between;
+        /* padding-left:2%;
+        padding-right:2%; */
+        padding:1%;
+        /* border:1px solid black; */
+        padding-bottom: 3%;
+    }
+
+    #settings1{
+        height:42%;
+        width:22%;
+        /* border:1px solid black; */
+        border-radius:10px;
+        padding-left:1%;
+        padding-right:2%;
+        background-color: white;
+    }
+
+    #settings_currency{
+        height:54%;
+        width:24%;
+        /* border:1px solid black; */
+        border-radius:10px;
+        padding-left:1%;
+        background-color: white;
+    }
+
+    #data_management{
+        height:51%;
+        width:39%;
+        /* border:1px solid black; */
+        border-radius:10px;
+        padding-left:1%;
+        padding-right:1%;
+        background-color: white;
+    }
+
+    #settings_about{
+        height:45%;
+        width:40%;
+        /* border:1px solid black; */
+        border-radius:10px;
+        padding-left:1%;
+        background-color: white;
+        display:flex;
+        flex-direction:column;
+    }
+
+    #features{
+        height:100%;
+        width:28%;
+        /* border:1px solid black; */
+        border-radius:10px;
+        padding-left:1%;
+        padding-right:1%;
+        background-color: white;
+    }
+
+    .currency_gap{
+        height:10%;
+    }
+
+    #exportCSV{
+        display:flex;
+        height:23.5%;
+        border-radius:10px;
+        width:95%;
+        font-size:120%;
+        background-color: #EFF9F5;
+        border:5px solid #CFEADE;
+        justify-content: center;
+        align-items:center;
+        font-family:'Times New Roman', Times, serif;
+    }
+
+    #importCSV{
+        display:flex;
+        height:23.5%;
+        border-radius:10px;
+        width:95%;
+        font-size:120%;
+        background-color:#EEF4FD;
+        border:5px solid #D1E0FA;
+        justify-content: center;
+        align-items:center;
+        font-family:'Times New Roman', Times, serif;
+    }
+
+    #clearData{
+        display:flex;
+        height:23.5%;
+        border-radius:10px;
+        width:95%;
+        font-size:120%;
+        background-color:#FEEDEC;
+        border:5px solid #FAD4D4;
+        justify-content: center;
+        align-items:center;
+        font-family:'Times New Roman', Times, serif;
+    }
+
+#footer{
+    width:100%;
+    height:20vh;
+    background-color: #0C1627;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:15px;
+    color:white;
+}

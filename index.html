@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Executive Finance</title>
+        <link rel="icon" type="image/png" href="Navbar logo.png">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div id = "navbar">
+            <img src = "Navbar logo.png" style = "height:70%">
+            <div class = "navbar" id="navbar_dashboard"><i class="fa-regular fa-house" style="color: rgb(255, 255, 255);"></i>Dashboard</div>
+            <div class = "navbar" id="navbar_expenses"><i class="fa-solid fa-wallet" style="color: rgb(255, 255, 255);"></i>Expenses</div>
+            <div class = "navbar" id="navbar_income"><i class="fa-solid fa-piggy-bank" style="color: rgb(255, 255, 255);"></i>Income</div>
+            <div class = "navbar" id="navbar_statistics"><i class="fa-solid fa-chart-area" style="color: rgb(255, 255, 255);"></i>Statistics</div>
+            <div class = "navbar" id="navbar_budgets"><i class="fa-solid fa-book" style="color: rgb(255, 255, 255);"></i>Budgets</div>
+            <div class = "navbar" id="navbar_settings"><i class="fa-solid fa-gear" style="color: rgb(255, 255, 255);"></i>Settings</div>
+        </div>
+        
+        <div id = "dashboard_page">
+            <div id = "welcome">
+                <div style = "font-weight:bold;font-size:250%;height:70%">Hello! Welcome Back</div>
+                <div style = "color:rgb(84, 84, 84);font-size:110%">Here's what's on with your finances currently!</div>
+            </div>
+            <div id = "personal_highlights">
+                <div class = "personal_highlights" id = "current_balance_dashboard">
+                    <div>Current Balance</div>
+                    <div id = "current_balance" style = "font-size:150%;font-weight:bold"><<₹ Current Balance>></div>
+                    <div id = "dashboard_comparison">Comparison to last month</div>
+                </div>
+                <div class = "personal_highlights" id = "total_income_dashboard">
+                    <div>Total Income</div>
+                    <div id = "total_income" style = "font-size:150%;font-weight:bold"><<₹ Total Income>></div>
+                    <div>This Month</div>
+                </div>
+                <div class = "personal_highlights" id = "total_expenditure_dashboard">
+                    <div>Total Expenses</div>
+                    <div id = "total_expenses" style = "font-size:150%;font-weight:bold"><<₹ Total Expenses>></div>
+                    <div>This Month</div>
+                </div>
+                <div class = "personal_highlights" id = "total_savings_dashboard">
+                    <div>Total Savings</div>
+                    <div id = "total_savings" style = "font-size:150%;font-weight:bold"><<₹ Total Savings>></div>
+                    <div>This Month</div>
+                </div>
+            </div>
+            <div id = "dashboard_3rdrow">
+                <div id = "budget_progress">
+                    <div style = "width:90%;height:15%;font-size:120%;"><b>Monthly Budget Progress</b></div>
+                    <progress id = "budget_bar" max="100" value = "76"></progress>
+                    <label for = "budget_bar" id = "dashboard_budget_text">₹ 1200 of ₹ 2000 spent</label>
+                    <button id = "budget_button"><b>View Budget</b></button>
+                </div>
+                <div id = "expense_trend">
+                    <h3 id = "dashboard_graph_label">Monthly Comparison</h3>
+                    <div id = "dashboard_graph_container">
+                        <canvas id ="dashboard_graph"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div id = "dashboard_4throw">
+                <div id = "recent_transactions">
+                    <div style="font-size:120%"><b>Recent Transactions</b></div>
+                    <div class = "recent_transactions" id = "recent_transactions1"></div>
+                    <div class = "recent_transactions" id = "recent_transactions2"></div>
+                    <div class = "recent_transactions" id = "recent_transactions3"></div>
+                    <div class = "recent_transactions" id = "recent_transactions4"></div>
+                </div>
+                <div id = "financial_data">
+                    <div style="align-self:flex-start;font-weight:bold;font-size:120%">All Time Insights</div>
+                    <div class = "financial_data" style="background-color:#ECFAF3;border-color:#a6ccb8;color:#163019">
+                        <div>Total Income</div>
+                        <div style="font-size:150%;font-weight:bold" id="total_income_display">₹ 20000</div>
+                        <div>All Time</div>
+                    </div>
+                    <div class = "financial_data" style="background-color:#FEF5F5;border-color:#EBCBCB;color:#6D1919">
+                        <div>Total Expenses</div>
+                        <div style="font-size:150%;font-weight:bold" id="total_expenses_display">₹ 20000</div>
+                        <div>All Time</div>
+                    </div>
+                </div>
+                <div id = "live_data">
+                    <div id = "currency_convertor">
+                        <h3>Currency Convertor</h3>
+                        <div style="width:80%;height:20%">
+                            <div>Enter Amount</div>
+                            <input id = "dashboard_amount" type="number" style="border-radius:10px;border:0px;background-color:#dcd8d3;padding-left:3%;width:97%">
+                        </div>
+                        <div style="width:80%;display:flex;justify-content:space-between;">
+                            <div style="width:45%">
+                                <div>From</div>
+                                <select id = "from" style="border:0px;border-radius:999999px;background-color: #dcd8d3;padding-left:5%;"></select>
+                            </div>
+                            <button style="height:50%;align-self:flex-end;border:0px;width:10%;background-color: #eeece7" id="dashboard_reverse"><b>⇌</b></button>
+                            <div style="width:45%;text-align:right;">
+                                <div>To</div>
+                                <select id = "to" style="border:0px;border-radius:999999px;background-color: #dcd8d3;padding-left:5%;"></select>
+                            </div>
+                        </div>
+                        <div id="dashboard_exchange" style="font-weight:bold"></div>
+                        <button style="font-weight:bold;border-radius:10px;border:0px;background-color: #16304b;color:white" id="convertor_button">Get Exchange Rate</button>
+                        <div style="height:5%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id = "income_page">
+            <div style="font-weight:bold;font-size:300%;width:97%;padding-left:2%;">Income Records</div>
+            <div style="font-size:120%;width:97%;padding-left:2%;color:rgb(84, 84, 84);padding-bottom:1%;">Track and manage your income records here</div>
+            <div id = "add_income_bar">
+                <input id="income_label" type="text" placeholder="Income Label">
+                <select id="income_type">
+                    <option>Salary / Stipend</option>
+                    <option>Freelancing</option>
+                    <option>Scholarship</option>
+                    <option>Internship</option>
+                    <option>Investments</option>
+                    <option>Gifts</option>
+                    <option>Refunds</option>
+                    <option>Business</option>
+                    <option>Rental Income</option>
+                    <option>Others</option>
+                </select>
+                <input type = "text" id="others_income" placeholder="Category">
+                <select id = "income_unit">
+                    <option>INR</option>
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                    <option>JPY</option>
+                </select>
+                <select id = "income_mode">
+                    <option>Cash</option>
+                    <option>Bank Transfer</option>
+                    <option>UPI</option>
+                    <option>Cheque</option>
+                    <option>Credit Card</option>
+                    <option>Debit Card</option>
+                    <option>Net Banking</option>
+                    <option>Digital Wallet</option>
+                    <option>Others</option>
+                </select>
+                <input id="income_amount" type="number" placeholder="Income Amount">
+                <input type="date" id="income_date">
+                <button id ="add_income">+ Add Income</button>
+            </div>
+            <div style="font-weight:bold;font-size:200%;width:97%;;padding-bottom:10px;color:rgb(84, 84, 84);padding-left:2%;">Income Transactions</div>
+            <div id = "income_list"></div>
+        </div>
+
+
+        <div id = "expenses_page">
+            <div style="font-weight:bold;font-size:300%;width:97%;padding-left:2%;">Expenses</div>
+            <div style="font-size:120%;width:97%;padding-left:2%;color:rgb(84, 84, 84);padding-bottom:1%;">Track and manage your expenses here</div>
+            <div id = "add_expense_bar">
+                <input id="expense_label" type="text" placeholder="Expense Label">
+                <select id="expense_type">
+                    <option>Food and Dining</option>
+                    <option>Transport</option>
+                    <option>Housing</option>
+                    <option>Bills and Subscriptions</option>
+                    <option>Education</option>
+                    <option>Shopping</option>
+                    <option>Health</option>
+                    <option>Entertainment</option>
+                    <option>Travel</option>
+                    <option>Personal</option>
+                    <option>Financial</option>
+                    <option>Others</option>
+                </select>
+                <input type = "text" id="others_expense" placeholder="Category">
+                <select id = "expense_unit">
+                    <option>INR</option>
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                    <option>JPY</option>
+                </select>
+                <select id = "expense_mode">
+                    <option>UPI</option>
+                    <option>Cash</option>
+                    <option>Debit Card</option>
+                    <option>Credit Card</option>
+                    <option>Bank Transfer</option>
+                    <option>Net Banking</option>
+                    <option>Digital Wallet</option>
+                    <option>Others</option>
+                </select>
+                <input id="expense_amount" type="number" placeholder="Expense Amount">
+                <input type="date" id="expense_date">
+                <button id ="add_expense">+ Add Expense</button>
+            </div>
+            <div style="font-weight:bold;font-size:200%;width:97%;;padding-bottom:10px;color:rgb(84, 84, 84);padding-left:2%;">Expense Transactions</div>
+            <div id = "expense_list"></div>
+        </div>
+
+        <div id = "budgets_page">
+            <div style="font-weight:bold;font-size:300%;width:97%;padding-left:2%;">Budgets</div>
+            <div style="font-size:120%;width:97%;padding-left:2%;color:rgb(84, 84, 84);padding-bottom:1%;">Set monthly budgets and keep a check on them here!</div>
+            <div id = "budgets_1strow">
+                <div id = "setBudgetBar">
+                    <select id = "budgetCategory"></select>
+                    <select id = "budgetCurrency">
+                        <option>INR</option>
+                        <option>USD</option>
+                        <option>EUR</option>
+                        <option>GBP</option>
+                        <option>JPY</option>
+                    </select>
+                    <input type="number" placeholder="Budget Amount" id = "budgetAmount">
+                    <button id="setBudgetButton">Set Budget</button>
+                </div>
+                <div id = "deleteBudgetBar">
+                    <select id = "deleteBudgetCategory"></select>
+                    <button id="deleteBudgetButton">Delete Budget</button>
+                </div>
+            </div>
+            <div id = "budgets_list"></div>
+
+        </div>
+
+        <div id = "statistics_page">
+            <div style="font-weight:bold;font-size:300%;width:97%;padding-left:2%;">Statistics</div>
+            <div style="font-size:120%;width:97%;padding-left:2%;color:rgb(84, 84, 84);padding-bottom:1%;">Check insights regarding your spending and finances!</div>
+
+            <div id = "statistics_row1">
+                <div id = "pie_chart_container">
+                    <div style = "display:flex;width:100%;height:5%;justify-content:space-evenly;align-items: center;">
+                        <h2 id = "pie_display" style="display:inline;">Expenses Division</h2>
+                        <select id = "pie_chart_options">
+                            <option>All Time</option>
+                            <option>This Month</option>
+                        </select>
+                    </div>
+                    <div id = "pie_chart_wrapper">
+                        <canvas id = "pie_chart" style="display:block"></canvas>
+                    </div>
+                </div>
+                <div id = "line_chart_container">
+                    <h2 style="display:inline;">Trends over the Months</h2>
+                    <div style = "display:flex;width:100%;height:5%;justify-content:space-between;align-items: center;padding-top:2%;margin-top:1%">
+                        <select id="line_option">
+                            <option>Incomes</option>
+                            <option>Expenses</option>
+                            <option>Savings</option>
+                        </select>
+                        <div>From <input type = date id = "line_start_date"></div>
+                        <div>To <input type = date id = "line_end_date"></div>
+                        <button id = "show_line_graph">Show Graph</button>
+                    </div>
+                    <div id = "line_chart_wrapper">
+                        <canvas id = "line_chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div id = "statistics_row2">
+                <div id = "pie_chart_container">
+                    <h2 id = "bar_display" style="display:block;">Monthly Comparison</h2>
+                    <div id = "bar_chart_wrapper">
+                        <canvas id = "bar_chart" style="display:block"></canvas>
+                    </div>
+                </div>
+                <div id = "top_insights_container">
+                    <h2 style="padding-left:3%">Top Insights</h2>
+                    <div id = "top_insights">
+                        <div class="top_insights" style="background-color:#F4F9FE;border:5px solid #cbdced;color:#16304b">
+                            <div style="font-size:130%;font-weight:bold">Highest Spending Category</div>
+                            <div id = "highest_spending_category" style="font-size:120%">Spending Category</div>
+                            <div id = "highest_spending_category_amount" style="font-size:150%"><b>Amount</b></div>
+                            <div id = "highest_spending_percentage">Percentage</div>
+                        </div>
+                        <div class="top_insights" style="background-color:#ECFAF3;border:5px solid #b7efd2;color:#062d19">
+                            <div style="font-size:130%;font-weight:bold">Average Spending</div>
+                            <div id = "average_spending" style="font-size:150%"><b>Amount This Month</b></div>
+                            <div id = "averageDays"></div>
+                            <div id = "average_spending_comparison">Comparison LM</div>
+                        </div>
+                        <div class="top_insights" style="background-color:#FEF5F5;border:5px solid #ebcbcb;color:#671919">
+                            <div style="font-size:130%;font-weight:bold">Largest Expense</div>
+                            <div id = "largest_expense_label" style="font-size:120%">Expense Label</div>
+                            <div id = "largest_expense_amount" style="font-size:150%"><b>Amount</b></div>
+                            <div id = "largest_expense_date">Date</div>
+                        </div>
+                        <div class="top_insights" style ="background-color:#FAF8FE;border:5px solid #d6caed;color:#2e175b">
+                            <div style="font-size:130%;font-weight:bold">Total Transactions</div>
+                            <div id = "total_transactions" style="font-size:200%"><b>Total Number</b></div>
+                            <div>This Month</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div id = "settings_page">
+            <div style="font-weight:bold;font-size:300%;width:97%;padding-left:2%;">Settings</div>
+            <div style="font-size:120%;width:97%;padding-left:2%;color:rgb(84, 84, 84);padding-bottom:1%;">Manage your preferences and data!</div>
+            <div id = "settings_row1">
+                <div id = "features">
+                    <h1>What we Offer</h1>
+                    <ul style="font-size:large;height:80%;display:flex;flex-direction:column;justify-content:space-between;">
+                        <li>Managing all your incomes and expenses.</li>
+                        <li>Adding custom transaction categories.</li>
+                        <li>Setting category wise budgets and keeping a track on them.</li>
+                        <li>API based Currency Convertor covering even major cryptocurrencies.</li>
+                        <li>Statistical graphs and charts to keep a check on how you spend.</li>
+                        <li>5 major currencies to choose your core currency from.</li>
+                        <li>Exporting your transaction records as a CSV file.</li>
+                        <li>Importing external CSV data into your transactions log.</li>
+                    </ul>
+                </div>
+                <div id = "settings1">
+                    <h3 style="margin-bottom:5%">Import CSV File Format</h3>
+                    <ul style="height:70%;display:flex;flex-direction:column;justify-content:space-evenly;margin:0%">
+                        <li>Header Row is mandatory</li>
+                        <li>Transaction Type : <i>Income / Expense</i> , 
+                        Label , 
+                        Initial Currency : <i>INR / JPY / ...</i> , 
+                        Initial Amount , 
+                        Category , 
+                        Transaction Mode : <i>UPI / Credit Card / ...</i> , 
+                        Date : <i>DD-MM-YYYY. Ex : 01-07-2026</i></li>
+                    </ul>
+                </div>
+                <div id = "settings_currency">
+                    <h2>Base Currency</h2>
+                    <div>
+                        <input type="radio" id="INR" name="currency" value="inr" checked />
+                        <label for="INR">INR (₹)</label>
+                    </div>
+                    <div class="currency_gap"></div>
+                    <div>
+                        <input type="radio" id="USD" name="currency" value="usd"/>
+                        <label for="USD">USD ($)</label>
+                    </div>
+                    <div class="currency_gap"></div>
+                    <div>
+                        <input type="radio" id="EUR" name="currency" value="eur"/>
+                        <label for="EUR">EUR (€)</label>
+                    </div>
+                    <div class="currency_gap"></div>
+                    <div>
+                        <input type="radio" id="GBP" name="currency" value="gbp"/>
+                        <label for="GBP">GBP (£)</label>
+                    </div>
+                    <div class="currency_gap"></div>
+                    <div>
+                        <input type="radio" id="JPY" name="currency" value="jpy"/>
+                        <label for="JPY">JPY (¥)</label>
+                    </div>
+                    
+                </div>
+                <div id = "data_management">
+                    <h2>Data Management</h2>
+                    <div style = "width:100%;display:flex;flex-direction:column;align-items:center;height:70%;justify-content:space-evenly;">
+                        <button id = "exportCSV">Export Transactions as CSV</button>
+                        <button id = "importCSV">Import Transactions from CSV</button>
+                        <input type="file" id="csvFile" accept=".csv" style="display: none;" />
+                        <button id = "clearData">Clear All Local Data</button>
+                    </div>
+                </div>
+                <div id = "settings_about">
+                    <h1>About</h1>
+                    <img src = "About Logo.png" style="height:60%;width:80%"> 
+                </div>
+            </div>
+        </div>
+        <div id = "footer">
+            <img src = "Full logo.png" style = "height:100%;">
+        </div>
+
+        <script src = "https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src = "javascript.js"></script>
+    </body>
+</html>
